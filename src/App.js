@@ -4,7 +4,7 @@ import Calculator from './Components/Calculator';
 
 function App() {
   return (
-   <Calculator heading="Simple Two Argument Calculator"/>
+   <Calculator heading="TWO ARGUMENT CALCULATOR"/>
   );
 }
 

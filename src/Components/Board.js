@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import './style.css'
 
 export default function Board(props) {
      
@@ -9,13 +10,16 @@ export default function Board(props) {
             <Button value={id} onClick={props.onClick}/> 
         )
     }
-
+     
     return (
-        <div className="container">
-            <h1>{props.heading}</h1>
-            <div className="screen">{props.value}</div>
+        
+        <div className="main"> 
+        <h3 style={{margin:"60px"}}>{props.heading}</h3>
+        <div className="clc">
+            
+            <div className="screen" style={{height:"60px", border:"2px solid black", fontSize:"30px",borderRadius: "20px"}}>{props.value}</div>
             <div className="row">
-                <div className="col-3">{clickButton("Clear")}</div>
+                <div className="col-3">{clickButton("AC")}</div>
                 <div className="col-3">{clickButton("+/-")}</div>
                 <div className="col-3">{clickButton("%")}</div>
                 <div className="col-3">{clickButton("/")}</div>
@@ -44,6 +48,7 @@ export default function Board(props) {
                 <div className="col-3">{clickButton("00")}</div>
                 <div className="col-3">{clickButton("=")}</div>
             </div>
+        </div>
         </div>
     )
 }
