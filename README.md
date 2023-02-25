@@ -1,4 +1,4 @@
-#Simple Two Argument Calcualtor
+# Simple Two Argument Calcualtor
 Use for algebric operation to calcualte the result of two arguments.
 It has a Login and Signup page use for security Purpose.
 
