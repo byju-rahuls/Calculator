@@ -1,11 +1,11 @@
 import {React,useState} from 'react'
 import './style.css'
-import { Navigate, useNavigate } from 'react-router';
+import {   useNavigate } from 'react-router';
 import axios from 'axios';
 import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 
-export default function Singup() {
+export default function Singup(props) {
 
     const url = "https://calculator-9yds.onrender.com/signup"
     const naviagte=useNavigate();
@@ -46,25 +46,31 @@ export default function Singup() {
 
         })
     }
+    const mystyle={
+        backgroundColor:props.backgroundColor,
+        color:props.color,
+        borderColor:props.color
+        
+    }
     return (
         <div  className="container" >
-            <div className='design'>
+            <div className='design' style={mystyle}>
         <Form  onSubmit={submit}>
         <h2 style={{marginTop:"40px"}}>SIGNUP PAGE</h2>
         <div   style={{fontWeight:"bold",marginBottom:"20px", marginTop:"20px",color:"rgb(60, 60, 232)", fontSize:"30px"}}>{status}</div>
             <Form.Group className="mb-3"  >
                 <Form.Label>Name</Form.Label>
-                <Form.Control style={{width:"300px", borderRadius:"10px"}} onChange={(e) => handle(e)} id="name" value={data.name} type="text" placeholder="Enter Name" />
+                <Form.Control style={{width:"300px", borderRadius:"10px",border:"4px solid black"}} onChange={(e) => handle(e)} id="name" value={data.name} type="text" placeholder="Enter Name" />
             </Form.Group>
 
             <Form.Group className="mb-3"  >
                 <Form.Label>Email address</Form.Label>
-                <Form.Control style={{width:"300px", borderRadius:"10px"}} onChange={(e) => handle(e)} id="email" value={data.email} type="email" placeholder="Enter email" />
+                <Form.Control style={{width:"300px", borderRadius:"10px",border:"4px solid black"}} onChange={(e) => handle(e)} id="email" value={data.email} type="email" placeholder="Enter email" />
             </Form.Group>
 
             <Form.Group className="mb-3" >
                 <Form.Label>Password</Form.Label>
-                <Form.Control style={{width:"300px", borderRadius:"10px"}} onChange={(e) => handle(e)} id="password" value={data.password} type="password" placeholder="Password" />
+                <Form.Control style={{width:"300px", borderRadius:"10px",border:"4px solid black"}} onChange={(e) => handle(e)} id="password" value={data.password} type="password" placeholder="Password" />
             </Form.Group>
 
             <div>

@@ -109,7 +109,7 @@ export default class Calculator extends Component {
     }
     render() {
         return (
-            <Board value={this.state.arg1} heading={this.props.heading} onClick={(id) => {this.handleValues(id)}} />
+            <Board color={this.props.color} value={this.state.arg1} heading={this.props.heading} onClick={(id) => {this.handleValues(id)}} />
         )
     }
 }

@@ -5,7 +5,7 @@ import './style.css'
 import { Form, Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 
 
-export default function Login() {
+export default function Login(props) {
     const url = "https://calculator-9yds.onrender.com/login"
     let history = useNavigate();
     const [status, setStatus] = useState("");
@@ -38,20 +38,26 @@ export default function Login() {
 
         })
     }
+    const mystyle={
+        backgroundColor:props.backgroundColor,
+        color:props.color,
+        borderColor:props.color
+        
+    }
     return (
         <div  className="container" > 
           
-         <Form className ="design" onSubmit={submit}>
+         <Form className ="design" style={mystyle} onSubmit={submit}>
             <h2 style={{marginTop:"40px"}}>LOGIN PAGE</h2>
             <div   style={{fontWeight:"bold",marginBottom:"20px", marginTop:"20px",color:"rgb(60, 60, 232)", fontSize:"30px"}}>{status}</div>
             <Form.Group className="mb-3"  >
                 <Form.Label>Email address</Form.Label>
-                <Form.Control style={{width:"300px", borderRadius:"10px"}} onChange={(e) => handle(e)} id="email" value={data.email} type="email" placeholder="Enter email" />
+                <Form.Control style={{width:"300px", borderRadius:"10px",border:"4px solid black"}} onChange={(e) => handle(e)} id="email" value={data.email} type="email" placeholder="Enter email" />
             </Form.Group>
 
             <Form.Group className="mb-3"  >
                 <Form.Label>Password</Form.Label>
-                <Form.Control style={{width:"300px", borderRadius:"10px"}} onChange={(e) => handle(e)} id="password" value={data.password} type="password" placeholder="Password" />
+                <Form.Control style={{width:"300px", borderRadius:"10px",border:"4px solid black"}} onChange={(e) => handle(e)} id="password" value={data.password} type="password" placeholder="Password" />
             </Form.Group>
 
             
