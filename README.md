@@ -1,3 +1,7 @@
+#Simple Two Argument Calcualtor
+Use for algebric operation to calcualte the result of two arguments.
+It has a Login and Signup page use for security Purpose.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
