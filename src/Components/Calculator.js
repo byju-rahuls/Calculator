@@ -45,6 +45,11 @@ export default class Calculator extends Component {
     handleValues(id) {
         // console.log(id+" "+this.state.arg1+" "+this.state.result+" "+this.state.op)
         if (this.state.arg1==="Invalid Expression") {
+            this.setState({
+                arg1:"",
+                op:"",
+                result:0
+            })
             return;
         }
         else if (id === '=') {
@@ -71,7 +76,7 @@ export default class Calculator extends Component {
                 })
             }
         }
-        else if (id === 'Clear') {
+        else if (id === 'AC') {
             this.setState({
                 arg1: "",
                 result: 0,
